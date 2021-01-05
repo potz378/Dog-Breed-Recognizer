@@ -56,6 +56,8 @@ y = y[:, :-1]  # Avoiding a relation between independent variables
 data_gen = ImageDataGenerator(horizontal_flip=True, vertical_flip=True, height_shift_range=0.1, width_shift_range=0.1, brightness_range=[0.3, 1.5], rotation_range=45, zoom_range=0.3)
 train_gen = data_gen.flow(X, y, batch_size=5, seed=420)
 
+
+##Note from github special editor: OH SH*T I DIDN'T NOTICED THESE !!?!
 model = Sequential([
     Conv2D(16, 3, padding='same', activation='relu', input_shape=X.shape[1:]),
     MaxPooling2D(),
