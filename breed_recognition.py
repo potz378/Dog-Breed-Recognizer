@@ -50,6 +50,7 @@ y = label_encoder(y)
 y = to_categorical(y)  # One hot encoding
 y = np.array(y, dtype=np.float32)
 output_categories = len(np.unique(y))
+# Note from the future: This is dumb VVV
 y = y[:, :-1]  # Avoiding a relation between independent variables
 
 # Training
